@@ -16,6 +16,19 @@
             <h1>{{product}}</h1>
             <p>{{description}}</p>
             <a target="_blank" :href="url">See more...</a>
+            <p>{{inStock? 'In Stock' : 'Out of Stock'}}</p>
+            <ul>
+              <li v-for="detail in details">{{detail}}</li>
+            </ul>
+            <div v-for="variant in variants" :key="variant.id">
+              {{variant.color}}
+            </div>
+            <div>
+              <h3>Sizes</h3>
+              <ul>
+                <li v-for="size in sizes">{{ size}}</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
